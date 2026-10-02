@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -23,3 +24,5 @@ predictions = model.predict(x_test)
 accuracy = accuracy_score(y_test, predictions) * 100
 
 print("Test Acccuracy of KNN: ", accuracy)
+joblib.dump(model, "models/knn_model.joblib")
+print("Model saved to models/knn_model.joblib")
