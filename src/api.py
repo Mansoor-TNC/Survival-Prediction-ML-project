@@ -3,18 +3,20 @@ import pandas as pd
 from typing import Literal
 from pydantic import BaseModel, Field
 from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Titanic Survival Prediction API")
+
+app.add_middleware(CORSMiddleware,allow_origins=["http://localhost:5173","http://127.0.0.1:5173",],allow_credentials=True,allow_methods=["*"],allow_headers=["*"],)
 
 model = joblib.load("models/knn_model.joblib")
 
 
 class Passenger(BaseModel):
     pclass: int = Field(ge=1, le=3)
-    fare: float = Field(ge=0)
+    fare: float = Field(gt=0)
     gender: Literal["male", "female"]
-    age: float = Field(ge=0)
+    age: float = Field(ge=0, le=100)
 
 
 @app.get("/")
@@ -44,6 +46,6 @@ def predict(passenger: Passenger):
     if prediction == 1:
         result = "Survived"
     else:
-        result = "Did not survive"
+        result = "Not Survive"
 
     return {"prediction": result}

@@ -1,0 +1,27 @@
+{
+  "name": "survival-prediction---ml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "api": "uvicorn src.api:app --reload",
+  "frontend": "npm --prefix frontend run dev",
+  "dev": "concurrently \"npm run api\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mansoor-TNC/Survival-Prediction-ML-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mansoor-TNC/Survival-Prediction-ML-project/issues"
+  },
+  "homepage": "https://github.com/Mansoor-TNC/Survival-Prediction-ML-project#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
