@@ -6,7 +6,7 @@ The project started as a practical machine-learning experiment and was then conv
 
 ## Try the Predictor
 
-🚢 **Try the live Titanic Survival Predictor:** **[Open the Web App](YOUR_DEPLOYED_SITE_URL)**
+🚢 **Try the live Titanic Survival Predictor:** **[Open the Web App](https://survival-prediction-ml-project.vercel.app/)**
 
 Enter passenger details and see the machine-learning model's prediction directly in the web application.
 
