@@ -4,15 +4,28 @@ A complete machine learning project that takes Titanic passenger information and
 
 The project started as a practical machine-learning experiment and was then converted into a reproducible ML application with model persistence and a FastAPI REST API.
 
+## Try the Predictor
+
+🚢 **Try the live Titanic Survival Predictor:** **[Open the Web App](YOUR_DEPLOYED_SITE_URL)**
+
+Enter passenger details and see the machine-learning model's prediction directly in the web application.
+
 ## Project Goals
 
 * Explore and understand the Titanic dataset
+
 * Perform basic exploratory data analysis
+
 * Prepare features for machine learning
+
 * Compare multiple classification algorithms
+
 * Evaluate models using cross-validation and a held-out test set
+
 * Build a reproducible training pipeline
+
 * Save the trained model
+
 * Expose the model through a REST API
 
 ## Dataset
@@ -20,10 +33,15 @@ The project started as a practical machine-learning experiment and was then conv
 The project uses the Titanic dataset containing passenger information such as:
 
 * Passenger class
+
 * Sex
+
 * Age
+
 * Fare
+
 * Number of siblings/spouses aboard
+
 * Number of parents/children aboard
 
 The target variable is:
@@ -37,7 +55,9 @@ The initial experiment explored relationships between passenger characteristics 
 Some notable observations included:
 
 * Female passengers had substantially higher survival rates than male passengers in this dataset.
+
 * Survival rates generally decreased from first class to third class.
+
 * Age showed differences in survival rates across age groups.
 
 These observations were then used to build classification models.
@@ -67,8 +87,11 @@ female → 1
 The following classification algorithms were evaluated:
 
 * Logistic Regression
+
 * K-Nearest Neighbors (KNN)
+
 * Decision Tree
+
 * Random Forest
 
 Five-fold cross-validation was used during model comparison.
@@ -123,6 +146,7 @@ This ensures that the same preprocessing is applied when the model is later used
 
 ```text
 titanic-survival-prediction/
+
 │
 ├── data/
 │   └── titanic.csv
@@ -250,21 +274,21 @@ This project covers the complete basic ML workflow:
 
 ```text
 Data
- ↓
+  ↓
 Exploration
- ↓
+  ↓
 Feature preparation
- ↓
+  ↓
 Model training
- ↓
+  ↓
 Model comparison
- ↓
+  ↓
 Evaluation
- ↓
+  ↓
 Model persistence
- ↓
+  ↓
 Inference
- ↓
+  ↓
 API deployment
 ```
 
@@ -275,10 +299,17 @@ It also demonstrates the transition from an exploratory notebook-based experimen
 Possible future improvements include:
 
 * More robust preprocessing pipelines
+
 * Additional feature engineering
+
 * Hyperparameter tuning
+
 * Better API validation and error handling
+
 * Automated testing
+
 * Containerization with Docker
+
 * Deployment to a cloud platform
+
 * Monitoring model performance
