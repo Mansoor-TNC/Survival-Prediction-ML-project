@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Titanic Survival Prediction API")
 
-app.add_middleware(CORSMiddleware,allow_origins=["http://localhost:5173","http://127.0.0.1:5173",],allow_credentials=True,allow_methods=["*"],allow_headers=["*"],)
+app.add_middleware(CORSMiddleware,allow_origins=["http://localhost:5173","http://127.0.0.1:5173","https://survival-prediction-ml-project.vercel.app"],allow_credentials=True,allow_methods=["*"],allow_headers=["*"],)
 
 model = joblib.load("models/knn_model.joblib")
 
