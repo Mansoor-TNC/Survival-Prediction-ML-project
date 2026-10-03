@@ -7,9 +7,11 @@ const [gender, setGender] = useState("");
 const [age, setAge] = useState("");
 const [fare, setFare] = useState("");
 const [analysisText, setAnalysisText] = useState("Analyzing");
+const [wakingText, setWakingText] = useState("Waking up prediction service");
 const [prediction, setPrediction] = useState("");
 const [error, setError] = useState("");
 const [loading, setLoading] = useState(false);
+const [apiReady, setApiReady] = useState(false);
 
 const [bubbles, setBubbles] = useState([]);
 
@@ -41,6 +43,43 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
+  let interval;
+
+  async function wakeApi() {
+    try {
+      const response = await fetch("https://survival-prediction-ml-project.onrender.com/");
+
+      if (response.ok) {
+        setApiReady(true);
+        clearInterval(interval);
+      }
+    } catch (error) {
+      console.log("API is still waking up...");
+    }
+  }
+
+  wakeApi();
+
+  interval = setInterval(wakeApi, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
+useEffect(() => {
+  if (apiReady) return;
+
+  let dots = 0;
+
+  const interval = setInterval(() => {
+    dots = (dots + 1) % 4;
+    setWakingText("Waking up prediction service" + ".".repeat(dots));
+  }, 600);
+
+  return () => clearInterval(interval);
+}, [!apiReady]);
+
+
+useEffect(() => {
   if (!loading) return;
 
   let dots = 0;
@@ -52,6 +91,8 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, [loading]);
+
+
 
 async function handleSubmit(event) {
 event.preventDefault();
@@ -194,8 +235,17 @@ return ( <main className="container">
       />
 
 
-      <button type="submit" disabled={loading}>
-        {loading ? `🌊 ${analysisText}` : "🔮 Predict Survival"}
+      <button type="submit" disabled={loading || !apiReady}>
+        {loading ? (
+          `🌊 ${analysisText}`
+        ) : !apiReady ? (
+          <>
+            <span>⏳ {wakingText}</span><br></br>
+            <small>Meanwhile you can fill the form</small>
+          </>
+        ) : (
+          "🔮 Predict Survival"
+        )}
       </button>
 
     </form>

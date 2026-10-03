@@ -93,126 +93,126 @@ body::after {
 
   radial-gradient(
       ellipse 90px 14px at 5% 10%,
-      rgba(56, 189, 248, 0.13),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 120px 16px at 22% 18%,
-      rgba(56, 189, 248, 0.11),
+    rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 80px 12px at 42% 10%,
-      rgba(56, 189, 248, 0.13),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 140px 15px at 65% 20%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 100px 13px at 88% 12%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
 
     radial-gradient(
       ellipse 130px 15px at 12% 32%,
-      rgba(56, 189, 248, 0.11),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 80px 12px at 32% 28%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 150px 16px at 52% 38%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 90px 12px at 74% 30%,
-      rgba(56, 189, 248, 0.13),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 120px 14px at 95% 38%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
 
     radial-gradient(
       ellipse 100px 13px at 8% 52%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 140px 15px at 28% 58%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 90px 12px at 48% 50%,
-      rgba(56, 189, 248, 0.13),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 130px 15px at 68% 60%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 100px 13px at 90% 52%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
 
     radial-gradient(
       ellipse 150px 16px at 15% 72%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 90px 12px at 38% 68%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 130px 15px at 58% 78%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 100px 13px at 80% 70%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
 
     radial-gradient(
       ellipse 120px 14px at 5% 90%,
-      rgba(56, 189, 248, 0.11),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 140px 15px at 28% 88%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 90px 12px at 50% 94%,
-      rgba(56, 189, 248, 0.13),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 150px 16px at 72% 90%,
-      rgba(56, 189, 248, 0.10),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     ),
     radial-gradient(
       ellipse 100px 13px at 94% 84%,
-      rgba(56, 189, 248, 0.12),
+      rgba(230, 238, 241, 0.13),
       transparent 70%
     );
 
@@ -459,7 +459,7 @@ h1 {
 
   transform-origin: center bottom;
 
-  animation: shipMotion 4s ease-in-out infinite;
+  animation: shipMotion 6s ease-in-out infinite;
 }
 
 @keyframes shipMotion {
@@ -655,7 +655,7 @@ button:disabled {
 }
 
 button:disabled {
-  animation: analyzingPulse 1.2s ease-in-out infinite;
+  animation: analyzingPulse 2s ease-in-out infinite;
 }
 
 @keyframes analyzingPulse {
@@ -668,6 +668,13 @@ button:disabled {
     transform: scale(1.03);
     box-shadow: 0 0 18px rgba(0, 229, 255, 0.25);
   }
+}
+
+button small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
 
 .result {
